@@ -10,7 +10,7 @@ const Calculator = () => {
     '4', '5', '6', '*',
     '1', '2', '3', '-',
     '0', '.', '=', '+',
-    '%', 'C'
+    '%','(', ')', 'C'
   ];
  //handleClick makes the buttons clickable. An if loop is used to clarify what will happen depending on which value is clicked
   const handleClick = (value) => {
