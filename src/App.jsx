@@ -1,4 +1,4 @@
- //I imported the main react libary and state, the React hook. I also imported grom the mathjs libary to evaluate math expressions that are strings.
+ //I imported the main react libary and state, the React hook. I also imported from the mathjs libary to evaluate math expressions that are strings.
 import React, { useState } from 'react';
 import { evaluate } from 'mathjs';
 //I used an arrow syntax to create a functional calculator. input has been added to show the current state of the calculator while setInput is the function to update the state.
@@ -10,9 +10,9 @@ const Calculator = () => {
     '4', '5', '6', '*',
     '1', '2', '3', '-',
     '0', '.', '=', '+',
-    'C'
+    '%', 'C'
   ];
- //handleClick makes the buttons clickable. 
+ //handleClick makes the buttons clickable. An if loop is used to clarify what will happen depending on which value is clicked
   const handleClick = (value) => {
     if (value === 'C') { //If C is clicked, the input is cleared
       setInput('');
