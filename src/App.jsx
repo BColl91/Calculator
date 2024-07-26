@@ -18,6 +18,8 @@ const Calculator = () => {
       setInput('');
     } else if (value === '=') { //if = is clicked, the maths will be evaluated and updated- showing the result
       try {
+        // Replace % with /100 before evaluating the expression
+        const evaluatedInput = input.replace(/%/g, '/100');
         setInput(evaluate(input).toString());
       } catch (error) {
         setInput('Error'); //this will catch anything not considered a mathametical calculation. It will show Error
@@ -28,13 +30,13 @@ const Calculator = () => {
   };
  //Return will display the overall outcome
   return (
-    <div className="calculator"> {/* The containor div for the calculator */}
-      <div className="display">{input}</div> {/* The input display */}
-      <div className="buttons"> {/* The div for the buttons. The buttons.map iterates the buttons array and creates an available button for each item */}
+    <div className="calculator"> 
+      <div className="display">{input}</div> 
+      <div className="buttons">
         {buttons.map((button) => ( 
           <button key={button} onClick={() => handleClick(button)}>
             {button}
-          </button> {/* The key gives each button element a unique key- which is a button label. The onclick is an eventHandler, when a button is clicked, this will call handleClick with the buttons value*/}
+          </button>
         ))}
       </div>
     </div>
