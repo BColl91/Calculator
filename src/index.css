@@ -67,3 +67,47 @@ button {
 button:hover {
   background: #00fbc169;
 }
+
+/* Media Queries for Responsive Design */
+
+@media (max-width: 768px) {
+  .calculator {
+    width: 90%;
+    height: auto;
+    margin-top: 50px;
+  }
+
+  .display {
+    height: 70px;
+    font-size: 28px;
+  }
+
+  button {
+    height: 60px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .calculator {
+    width: 95%;
+    height: auto;
+    margin-top: 30px;
+  }
+
+  .display {
+    height: 60px;
+    font-size: 24px;
+    padding: 5px;
+  }
+
+  .buttons {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3px;
+  }
+
+  button {
+    height: 50px;
+    font-size: 14px;
+  }
+}
